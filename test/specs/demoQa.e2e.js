@@ -1,6 +1,6 @@
 import practiceForm from '../pageobjects/DemoQA/practiceForm.js';
 import dragDrop from '../pageobjects/DemoQA/dragDrop.js';
-import data from '../TestData/demoQaTestdata.json' with {type: 'json'}
+import data from '../TestData/demoQaTestdata.json' with {type: 'json'};
 
 describe('DemoQA Practice Form Automation', () => {
 
