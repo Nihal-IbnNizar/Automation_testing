@@ -1,10 +1,11 @@
 import practiceForm from '../pageobjects/DemoQA/practiceForm.js';
 import dragDrop from '../pageobjects/DemoQA/dragDrop.js';
+import data from '../TestData/demoQaTestdata.json' with {type: 'json'}
 
 describe('DemoQA Practice Form Automation', () => {
 
     it('should validate the URL of the website', async () => {
-        await practiceForm.open('https://demoqa.com');
+        await practiceForm.open(data.url);
         await expect(practiceForm.$forms()).toBeDisplayed();
     });
 
