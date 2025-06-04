@@ -1,5 +1,5 @@
 import { $ } from '@wdio/globals';
-import CommonClass from '../DemoBlaze/commonClass.js';
+import CommonClass from './commonClass';
 import { faker } from '@faker-js/faker';
 
 class PracticeFormPage extends CommonClass {

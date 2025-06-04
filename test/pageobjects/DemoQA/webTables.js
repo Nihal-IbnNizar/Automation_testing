@@ -5,7 +5,7 @@ import CommonClass from '../DemoBlaze/commonClass.js';
 class WebTables extends CommonClass {
     constructor() {
         super();
-        this.$elements = () => $(`//div[text()='Elements']`)
+        this.$elements = () => $(`//div[h5='Elements']`)
         this.$webtables = () => $(`//span[text()='Web Tables']`)
 
         this.$addBtn = () => $(`#addNewRecordButton`);
@@ -28,7 +28,6 @@ class WebTables extends CommonClass {
     async openWebTables() {
         await this.$elements().click();
         await this.$webtables().click();
-        await this.$addBtn().isDisplayed();
     }
 
     enterdata = async () => {
