@@ -2,6 +2,7 @@ import data from '../TestData/swagLabsTestdata.json' with {type: 'json'};
 import loginPage from '../pageobjects/SwagLabs/LoginPage';
 import homePage from '../pageobjects/SwagLabs/HomePage';
 import cartPage from '../pageobjects/SwagLabs/CartPage';
+import checkout from '../pageobjects/SwagLabs/Checkout';
 
 describe("Swag Labs Website e2e automation", () => {
 
@@ -54,7 +55,6 @@ describe("Swag Labs Website e2e automation", () => {
     })
 
     it('should validate if cart page is loaded successfully', async () => {
-
         await (homePage.$cartBadge()).click();
         const currentUrl = await browser.getUrl();
         await expect(currentUrl).toBe(data.cartUrl);
@@ -73,5 +73,20 @@ describe("Swag Labs Website e2e automation", () => {
 
         const isProd2Displayed = await cartPage.$cartProductName(prod2).isExisting();
         await expect(isProd2Displayed).toBe(false);
+    })
+
+    it('should checkout of the page',async () => {
+        await cartPage.checkout();
+        await expect (checkout.$title()).toBeDisplayed();
+    })
+
+    it('should fail on clicking continue without filling the form',async () => {
+        await checkout.$continueBtn().click();
+        await expect (checkout.$errorMsg()).toBeDisplayed();
+    })
+
+    it('should fill in the checkout form and submit',async () => {
+        await checkout.fillForm();
+        await expect(checkout.$continueBtn()).toBeDisplayed();
     })
 })
