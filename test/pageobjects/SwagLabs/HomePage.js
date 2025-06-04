@@ -21,7 +21,7 @@ class HomePage extends CommonClass {
     }
 
     getProductPrice = async (prod) => {
-        await (this.$productPrice(prod)).getText();
+        return await (this.$productPrice(prod)).getText();
     }
 
 }
