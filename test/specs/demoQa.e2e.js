@@ -3,7 +3,7 @@ import dragDrop from '../pageobjects/DemoQA/dragDrop.js';
 import webTables from '../pageobjects/DemoQA/webTables.js';
 import data from '../TestData/demoQaTestdata.json' with {type: 'json'};
 
-describe('DemoQA Practice Form Automation', () => {
+describe('DemoQA Website Automation', () => {
 
     it('should validate the URL of the website', async () => {
         await practiceForm.open(data.url);
@@ -41,11 +41,32 @@ describe('DemoQA Practice Form Automation', () => {
 
 
     //WEB TABLES
-    it('should navigate to the web tables', async()=>{
-        await expect (webTables.openWebTables());
+    it('should navigate to the web tables', async () => {
+        await expect(webTables.openWebTables());
     })
 
-    it('should fill in the registration form', async()=>{
-        await expect (webTables.fillRegForm());
-    })
+    let testData, ename;
+    it('should fill in  the form and validate it is displayed', async () => {
+        testData = await webTables.enterdata();
+        await expect(webTables.$dataloc(testData.randomName)).toBeDisplayed();
+        await expect(webTables.$dataloc(testData.randomLastName)).toBeDisplayed();
+        await expect(webTables.$dataloc(testData.randomEmail)).toBeDisplayed();
+        await expect(webTables.$dataloc(testData.randomAge.toString())).toBeDisplayed();
+        await expect(webTables.$dataloc(testData.randomSalary.toString())).toBeDisplayed();
+        await expect(webTables.$dataloc(testData.randomDepartment)).toBeDisplayed();
+    });
+
+    it('edit the form and validate it is displayed', async () => {
+        await webTables.$editBtn(testData.randomName).click();
+        ename = await webTables.edit();
+        browser.pause(2000);
+
+        await expect(webTables.$dataloc(ename)).toBeDisplayed();
+    });
+
+    it('delete the data and validate it is deleted', async () => {
+        await webTables.$deleteBtn(ename).click();
+        await expect(webTables.$dataloc(ename)).not.toBeDisplayed();
+        await browser.pause(5000);
+    });
 });
