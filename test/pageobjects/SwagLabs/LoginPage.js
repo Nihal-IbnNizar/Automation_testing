@@ -1,4 +1,5 @@
 import CommonClass from "./CommonClass";
+import homePage from "./HomePage";
 
 class LoginPage extends CommonClass {
     constructor() {
@@ -13,7 +14,7 @@ class LoginPage extends CommonClass {
     }
 
     /**
-     * Login functionality
+     * Enter login credentials
      * @param {string} username 
      * @param {string} password 
      */
@@ -21,6 +22,8 @@ class LoginPage extends CommonClass {
         await this.$loginUsername().setValue(username);
         await this.$loginPassword().setValue(password);
         await this.$loginButton().click();
+
+        await homePage.$productHeader().waitForDisplayed({ timeout: 3000 });
     }
 }
 

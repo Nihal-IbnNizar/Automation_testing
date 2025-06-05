@@ -37,7 +37,7 @@ describe("Swag Labs Website e2e automation", () => {
 
     it('should add second product to the cart', async () => {
         await homePage.addToCart(prod2);
-        price2 = await (homePage.getProductPrice(prod2));
+        //price2 = await (homePage.getProductPrice(prod2));
         await expect(homePage.$cartBadge()).toHaveText('2');
         await expect(homePage.$removeBtn(prod2)).toBeDisplayed();
     })
@@ -75,7 +75,7 @@ describe("Swag Labs Website e2e automation", () => {
         await expect(isProd2Displayed).toBe(false);
     })
 
-    it('should checkout of the page', async () => {
+    it('should checkout of the cart page', async () => {
         await cartPage.checkout();
         await expect(checkout.$title()).toBeDisplayed();
     })
@@ -90,7 +90,7 @@ describe("Swag Labs Website e2e automation", () => {
         await expect(checkoutConfirmation.$title()).toBeDisplayed();
     })
 
-    it('should if the total price matches the summed of the products', async () => {
+    it('should if the total price matches the summed price of the products', async () => {
         const expectedTotal = parseFloat(price1.replace('$', '')) + parseFloat(price3.replace('$', ''));
         const summedPrice = await checkoutConfirmation.checkPrice();
         await expect(summedPrice).toBeCloseTo(expectedTotal, 2);

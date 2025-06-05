@@ -1,7 +1,7 @@
 import CommonClass from "./CommonClass";
 
-class CartPage extends CommonClass{
-    constructor(){
+class CartPage extends CommonClass {
+    constructor() {
         super();
 
         //Locators of the cart page
