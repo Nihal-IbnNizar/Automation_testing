@@ -6,7 +6,7 @@ class LoginPage extends CommonClass {
 
         this.$logo = () => $(`//div[@class='login_logo']`)
 
-        //Locators for Login
+        //Locators for Login credentials
         this.$loginUsername = () => $(`//input[@id='user-name']`)
         this.$loginPassword = () => $(`//input[@id='password']`)
         this.$loginButton = () => $(`//input[@id='login-button']`)

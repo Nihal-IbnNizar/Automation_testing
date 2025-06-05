@@ -3,6 +3,7 @@ import loginPage from '../pageobjects/SwagLabs/LoginPage';
 import homePage from '../pageobjects/SwagLabs/HomePage';
 import cartPage from '../pageobjects/SwagLabs/CartPage';
 import checkout from '../pageobjects/SwagLabs/Checkout';
+import checkoutConfirmation from '../pageobjects/SwagLabs/CheckoutConfirmation';
 
 describe("Swag Labs Website e2e automation", () => {
 
@@ -62,7 +63,6 @@ describe("Swag Labs Website e2e automation", () => {
     })
 
     it('should validate if the product details is correct in the cart', async () => {
-        
         cartPrice1 = await cartPage.$cartProductPrice(prod1).getText();
         await expect(cartPrice1).toBe(price1);
         await expect(cartPage.$cartProductName(prod1)).toBeDisplayed();
@@ -75,18 +75,37 @@ describe("Swag Labs Website e2e automation", () => {
         await expect(isProd2Displayed).toBe(false);
     })
 
-    it('should checkout of the page',async () => {
+    it('should checkout of the page', async () => {
         await cartPage.checkout();
-        await expect (checkout.$title()).toBeDisplayed();
+        await expect(checkout.$title()).toBeDisplayed();
     })
 
-    it('should fail on clicking continue without filling the form',async () => {
+    it('should fail on clicking continue without filling the form', async () => {
         await checkout.$continueBtn().click();
-        await expect (checkout.$errorMsg()).toBeDisplayed();
+        await expect(checkout.$errorMsg()).toBeDisplayed();
     })
 
-    it('should fill in the checkout form and submit',async () => {
+    it('should fill in the checkout form and submit', async () => {
         await checkout.fillForm();
-        await expect(checkout.$continueBtn()).toBeDisplayed();
+        await expect(checkoutConfirmation.$title()).toBeDisplayed();
+    })
+
+    it('should if the total price matches the summed of the products', async () => {
+        const expectedTotal = parseFloat(price1.replace('$', '')) + parseFloat(price3.replace('$', ''));
+        const summedPrice = await checkoutConfirmation.checkPrice();
+        await expect(summedPrice).toBeCloseTo(expectedTotal, 2);
+        await expect(checkoutConfirmation.$title()).toBeDisplayed();
+    })
+
+    it('should check if final confirmation message is shown and order is completed', async () => {
+        
+        await checkoutConfirmation.$finishBtn().click();
+        
+        await expect (checkoutConfirmation.$confirmTitle()).toBeDisplayed();
+        await expect (checkoutConfirmation.$thankyouMsg()).toBeDisplayed();
+
+        await checkoutConfirmation.$homeBtn().click();
+        await expect (homePage.$logo()).toBeDisplayed();
+
     })
 })
