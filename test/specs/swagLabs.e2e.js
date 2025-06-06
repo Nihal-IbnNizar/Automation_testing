@@ -28,7 +28,7 @@ describe("Swag Labs Website e2e automation", () => {
     const prod3 = "Sauce Labs Fleece Jacket";
     let price1, price2, price3, cartPrice1, cartPrice3;
 
-    it('should add a product to the cart', async () => {
+     it('should add a product to the cart', async () => {
         await homePage.addToCart(prod1);
         price1 = await (homePage.getProductPrice(prod1));
         await expect(homePage.$cartBadge()).toHaveText('1');
