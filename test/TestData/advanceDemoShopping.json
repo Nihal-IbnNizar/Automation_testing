@@ -1,5 +1,19 @@
 {
-    "homeUrl":"https://advantageonlineshopping.com/#/",
-    "regUrl":"https://advantageonlineshopping.com/#/register",
-    "cartUrl":"https://advantageonlineshopping.com/#/shoppingCart"
+  "homeUrl": "https://advantageonlineshopping.com/#/",
+  "regUrl": "https://advantageonlineshopping.com/#/register",
+  "cartUrl": "https://advantageonlineshopping.com/#/shoppingCart",
+  "newUser": {
+    "username": "nihaltest",
+    "email": "nihaltest@test.com",
+    "password": "Test@1234",
+    "confirmPassword": "Test@1234",
+    "firstName": "Nihal",
+    "lastName": "Test",
+    "phone": "9876543210",
+    "country": "India",
+    "city": "Kochi",
+    "address": "123 Test Street",
+    "state": "Kerala",
+    "postalCode": "682001"
+  }
 }
