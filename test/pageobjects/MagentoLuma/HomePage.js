@@ -7,6 +7,8 @@ class HomePage extends CommonClass{
         this.$createAccount = () => $(`//a[text()='Create an Account']`);
         //this.$signIn = ()=> $(`//li[@class='authorization-link']//a`)
 
+        // this.$mensCategory=()=>$(`//span[text()='Men']`);
+
     }
 }
 

@@ -4,7 +4,8 @@ class UserProfile extends CommonClass{
     constructor(){
         super();
 
-        this.$myAccount = () => $(`//span[text()='My Account']`)
+        this.$myAccount = () => $(`//span[text()='My Account']`);
+        this.$mensCategory=()=>$(`//span[text()='Men']`);
     }
 }
 

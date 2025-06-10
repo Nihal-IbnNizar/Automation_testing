@@ -6,5 +6,6 @@
         "email":"nihaltest@testing.com",
         "password":"Password#123",
         "confirmPassword":"Password#123"
-    }
+    },
+    "prod1":"Hero Hoodie"
 }
