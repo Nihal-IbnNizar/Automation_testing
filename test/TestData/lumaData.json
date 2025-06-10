@@ -1,0 +1,10 @@
+{
+    "homeUrl":"https://magento.softwaretestingboard.com/",
+    "demoUser":{
+        "firstname":"Nihal",
+        "lastname":"Test",
+        "email":"nihaltest@testing.com",
+        "password":"Password#123",
+        "confirmPassword":"Password#123"
+    }
+}
