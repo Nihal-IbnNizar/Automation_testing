@@ -12,7 +12,7 @@ class ProductsPage extends CommonClass{
         this.$addToCartSuccessMsg=()=>$(`//div[@class="message-success success message"]`);
 
         this.$cartIcon=()=>$(`//a[@class="action showcart"]`);
-        this.$updatedQty=()=>$(`#cart-item-818032-qty`);
+        this.$updatedQty=()=>$(`//input[contains(@class, 'item-qty cart-item-qty')]`);
         this.$updateBtn=()=>$(`//button[@title='Update']`);
 
         this.$viewCart=()=>$(`//a[@class='action viewcart']`);
@@ -42,7 +42,7 @@ class ProductsPage extends CommonClass{
      * Clicks on view cart button in the cart modal
      */
     viewCart = async () => {
-        this.$viewCart().click();
+        await this.$viewCart().click();
     }
 
 }

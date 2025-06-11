@@ -31,8 +31,8 @@ class CheckoutPage extends CommonClass{
      */
     fillForm = async (data) => {
         await this.$firstName(data.firstname);
-        await this.$lastname(data.lastname);
-        await this.$comapny(data.company);
+        await this.$lastName(data.lastname);
+        await this.$company(data.company);
 
         await this.$addressStreetOne(data.street);
         await this.$addressStreetTwo(data.street);

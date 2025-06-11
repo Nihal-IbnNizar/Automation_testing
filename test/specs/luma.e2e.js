@@ -1,12 +1,12 @@
 import data from '../TestData/lumaData.json' with {type: 'json'};
-import homePage from '../pageobjects/Assessment/HomePage';
-import loginPage from '../pageobjects/Assessment/LoginPage';
-import mensCategory from '../pageobjects/Assessment/MensCategory';
-import topsPage from '../pageobjects/Assessment/TopsPage';
-import productPage from '../pageobjects/Assessment/ProductPage';
-import cartPage from '../pageobjects/Assessment/CartPage';
-import checkoutPage from '../pageobjects/Assessment/CheckoutPage';
-import successPage from '../pageobjects/Assessment/SuccessPage';
+import homePage from '../pageobjects/Magento Luma/HomePage';
+import loginPage from '../pageobjects/Magento Luma/LoginPage';
+import mensCategory from '../pageobjects/Magento Luma/MensCategory';
+import topsPage from '../pageobjects/Magento Luma/TopsPage';
+import productPage from '../pageobjects/Magento Luma/ProductPage';
+import cartPage from '../pageobjects/Magento Luma/CartPage';
+import checkoutPage from '../pageobjects/Magento Luma/CheckoutPage';
+import successPage from '../pageobjects/Magento Luma/SuccessPage';
 
 describe('Magento Luma e2e Automation', () => {
     it('should launch the application succesfully', async () => {
@@ -53,7 +53,7 @@ describe('Magento Luma e2e Automation', () => {
     });
 
     it('should validate the name of the product', async () => {
-        const prodName = await (productPage.$title(data.product));
+        const prodName = await (productPage.$title(data.product)).getText();
         expect(prodName).toBe(data.product);
     });
 
@@ -68,7 +68,7 @@ describe('Magento Luma e2e Automation', () => {
     });
 
     it('should navigate to the cart page', async () => {
-        await (productPage.$viewCart()).click();
+        await productPage.viewCart();
         expect(await cartPage.$title()).toBeDisplayed();
     });
 
@@ -84,17 +84,17 @@ describe('Magento Luma e2e Automation', () => {
 
     it('should navigate to checkout page', async () => {
         await (cartPage.$checkoutBtn()).click();
-        expect(checkoutPage.$title).toBeDisplayed();
+        expect(await checkoutPage.$title()).toBeDisplayed();
     });
 
     it('should fill in the shipping form', async () => {
         await checkoutPage.fillForm(data.demoUser);
-        expect(checkoutPage.$placeOrderBtn()).toBeDisplayed();
+        expect(await checkoutPage.$placeOrderBtn()).toBeDisplayed();
     });
 
     it('should place the order and success message displayed', async () => {
         await checkoutPage.$placeOrderBtn().click();
-        expect(successPage.$title()).toBeDisplayed();
+        expect(await successPage.$title()).toBeDisplayed();
     });
 
 
