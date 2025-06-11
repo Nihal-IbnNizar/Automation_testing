@@ -1,4 +1,4 @@
-export default class CommonClass{
+export default class CommonClass {
     async open(url) {
         return browser.url(url);
     }

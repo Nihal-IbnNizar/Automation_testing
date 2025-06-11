@@ -32,15 +32,15 @@
 
         <tr>
             <td>Start</td>
-            <td>2025-06-10T16:47:03.474Z</td>
+            <td>2025-06-11T09:19:01.864Z</td>
         </tr>
         <tr>
             <td>End</td>
-            <td>2025-06-10T16:47:34.135Z</td>
+            <td>2025-06-11T09:20:10.159Z</td>
         </tr>
         <tr>
             <td>Duration</td>
-            <td>00:00:30.661</td>
+            <td>00:01:08.295</td>
         </tr>
         <tr>
             <td>Breakdown</td>
@@ -52,9 +52,9 @@
                         <td class='test-fail'>Test Failures</td>
                     </tr>
                     <tr>
+                        <td>8</td>
+                        <td>0</td>
                         <td>7</td>
-                        <td>0</td>
-                        <td>0</td>
                     </tr>
                 </table>
             </td>
@@ -376,9 +376,9 @@
 <table class="table table-bordered table-suite">
     <tr class="suite-header">
         <td colspan="2"
-            class="suite-pass">
+            class="suite-fail">
             <h3>
-                <span style="margin: 2px; padding: 1px" class="glyphicon glyphicon-chevron-up">&nbsp;</span>Magento Luma Automation
+                <span style="margin: 2px; padding: 1px" class="glyphicon glyphicon-chevron-up">&nbsp;</span>Magento Luma e2e Automation
             </h3>
             
         </td>
@@ -394,21 +394,21 @@
     
         <tr>
             <td>Suite Start</td>
-            <td>2025-06-10T16:47:03.474Z</td>
+            <td>2025-06-11T09:19:01.864Z</td>
         </tr>
         <tr>
             <td>Suite End</td>
-            <td>2025-06-10T16:47:34.135Z</td>
+            <td>2025-06-11T09:20:10.159Z</td>
         </tr>
         <tr>
             <td>Suite Duration</td>
-            <td>00:00:30.661</td>
+            <td>00:01:08.294</td>
         </tr>
 
         
             <tr>
                 <td>Tests</td>
-                <td>7</td>
+                <td>15</td>
             </tr>
             <tr>
                 <td colspan="2">
@@ -422,7 +422,7 @@
                         <td colspan="2" class="test-pass">
                             <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
                             <span class="success">&#10004;</span>
-                            <span class="test-title">should launch the pplication using a valid URL</span>
+                            <span class="test-title">should launch the application succesfully</span>
                         </td>
                     </tr>
                     
@@ -439,7 +439,7 @@
                         <td colspan="2" class="test-pass">
                             <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
                             <span class="success">&#10004;</span>
-                            <span class="test-title">should register a new user by filling valid details</span>
+                            <span class="test-title">should validate if the login page is loaded successfully</span>
                         </td>
                     </tr>
                     
@@ -456,7 +456,7 @@
                         <td colspan="2" class="test-pass">
                             <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
                             <span class="success">&#10004;</span>
-                            <span class="test-title">should navigate to mens category</span>
+                            <span class="test-title">should login with valid credentials</span>
                         </td>
                     </tr>
                     
@@ -473,7 +473,7 @@
                         <td colspan="2" class="test-pass">
                             <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
                             <span class="success">&#10004;</span>
-                            <span class="test-title">should display the details of the product</span>
+                            <span class="test-title">should navigate to mens page</span>
                         </td>
                     </tr>
                     
@@ -490,7 +490,7 @@
                         <td colspan="2" class="test-pass">
                             <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
                             <span class="success">&#10004;</span>
-                            <span class="test-title">should validate if the same product details is displayed</span>
+                            <span class="test-title">should navigate tops category</span>
                         </td>
                     </tr>
                     
@@ -507,9 +507,162 @@
                         <td colspan="2" class="test-pass">
                             <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
                             <span class="success">&#10004;</span>
-                            <span class="test-title">should add a product to the cart</span>
+                            <span class="test-title">should sort the products by price</span>
                         </td>
                     </tr>
+                    
+                </table>
+            </td>
+        <tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>
+                <table class="table table-test">
+                    <tr class="test-header">
+                        <td colspan="2" class="test-fail">
+                            <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
+                            <span class="error">&#10006;</span>
+                            <span class="test-title">should select a product and navigate to product page</span>
+                        </td>
+                    </tr>
+                    
+                        
+                            <tr class="test-row expandable-control">
+                                <td colspan="2">
+                                    <p class="pre assert ">
+                                <span style="margin: 2px; padding: 1px"
+                                      class='glyphicon glyphicon-chevron-down'>&nbsp;</span>
+                                        Assertion: webdriverio(middleware): element did not become interactable: Element &lt;img class=&quot;product-image-photo&quot; data-bind=&quot;attr: {src: src, alt: alt}, style: {width: &#39;auto&#39;, height:&#39;auto&#39;}&quot; src=&quot;https://magento.softwaretestingboard.com/pub/media/catalog/product/cache/e1cd34fa0997ba16279ed26af316ed3f/m/t/mt12-blue_main_1.jpg&quot; alt=&quot;Cassius Sparring Tank&quot; style=&quot;width: auto; height: auto;&quot; /&gt; did not become interactable
+                                    </p>
+                                </td>
+                            </tr>
+                            
+                                <tr class="test-row">
+                                    <td colspan="2">
+                                        <pre class='pre stack panel'>error properties: Object({ url: http://localhost:53364/session/6b15ff87d9a77bd64d2905a36b85fe45/element/f.BCDAB7BC0640847E6BD375526CB2A2EA.d.B98EE19293E3961ED1B6222A3ED75BDF.e.482/click, opts: Object({ method: &#39;POST&#39;, redirect: &#39;follow&#39;, signal: [object AbortSignal], body: Object({  }), headers: [object Headers], dispatcher: Agent({ _events: null({  }), _eventsCount: 0, _maxListeners: undefined, Symbol(shapeMode): false, Symbol(kCapture): false, Symbol(nodejs.stream.destroyed): false, Symbol(onDestroyed): null, Symbol(closed): false, Symbol(onClosed): [  ], Symbol(dispatch interceptors): [ Function ], Symbol(options): Object({ connectTimeout: 120000, headersTimeout: 120000, bodyTimeout: 120000, connect: undefined, interceptors: undefined }), Symbol(maxRedirections): 0, Symbol(factory): Function, Symbol(clients): Map( [ &#39;http://localhost:53364&#39;, Pool({ _events: null({ connectionError: [ Function, Function ], drain: Function, connect: Function, disconnect: Function }), _eventsCount: 4, _maxListeners:  ...
+webdriverio(middleware): element did not become interactable: Element &lt;img class=&quot;product-image-photo&quot; data-bind=&quot;attr: {src: src, alt: alt}, style: {width: &#39;auto&#39;, height:&#39;auto&#39;}&quot; src=&quot;https://magento.softwaretestingboard.com/pub/media/catalog/product/cache/e1cd34fa0997ba16279ed26af316ed3f/m/t/mt12-blue_main_1.jpg&quot; alt=&quot;Cassius Sparring Tank&quot; style=&quot;width: auto; height: auto;&quot; /&gt; did not become interactable</pre>
+                                    </td>
+                                </tr>
+                            
+                        
+                        
+                        
+                        
+                    
+                </table>
+            </td>
+        <tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>
+                <table class="table table-test">
+                    <tr class="test-header">
+                        <td colspan="2" class="test-fail">
+                            <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
+                            <span class="error">&#10006;</span>
+                            <span class="test-title">should validate the name of the product</span>
+                        </td>
+                    </tr>
+                    
+                        
+                            <tr class="test-row expandable-control">
+                                <td colspan="2">
+                                    <p class="pre assert ">
+                                <span style="margin: 2px; padding: 1px"
+                                      class='glyphicon glyphicon-chevron-down'>&nbsp;</span>
+                                        Assertion: 
+                                    </p>
+                                </td>
+                            </tr>
+                            
+                        
+                        
+                        
+                        
+                    
+                </table>
+            </td>
+        <tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>
+                <table class="table table-test">
+                    <tr class="test-header">
+                        <td colspan="2" class="test-fail">
+                            <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
+                            <span class="error">&#10006;</span>
+                            <span class="test-title">should add the product to cart</span>
+                        </td>
+                    </tr>
+                    
+                        
+                            <tr class="test-row expandable-control">
+                                <td colspan="2">
+                                    <p class="pre assert ">
+                                <span style="margin: 2px; padding: 1px"
+                                      class='glyphicon glyphicon-chevron-down'>&nbsp;</span>
+                                        Assertion: Error: Can&#39;t call setValue on element with selector &quot;//input[@name=&#39;qty&#39;]&quot; because element wasn&#39;t found
+                                    </p>
+                                </td>
+                            </tr>
+                            
+                                <tr class="test-row">
+                                    <td colspan="2">
+                                        <pre class='pre stack panel'>    at async ProductsPage.addToCart (file:///D:/Testing%20Mavens/Auto_testing/test/pageobjects/Assessment/ProductPage.js:27:9)
+    at async UserContext.&lt;anonymous&gt; (file:///D:/Testing%20Mavens/Auto_testing/test/specs/luma.e2e.js:53:9)</pre>
+                                    </td>
+                                </tr>
+                            
+                        
+                        
+                        
+                        
+                    
+                </table>
+            </td>
+        <tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>
+                <table class="table table-test">
+                    <tr class="test-header">
+                        <td colspan="2" class="test-fail">
+                            <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
+                            <span class="error">&#10006;</span>
+                            <span class="test-title">should update the quantity of the product</span>
+                        </td>
+                    </tr>
+                    
+                        
+                            <tr class="test-row expandable-control">
+                                <td colspan="2">
+                                    <p class="pre assert ">
+                                <span style="margin: 2px; padding: 1px"
+                                      class='glyphicon glyphicon-chevron-down'>&nbsp;</span>
+                                        Assertion: Error: Can&#39;t call setValue on element with selector &quot;#cart-item-818032-qty&quot; because element wasn&#39;t found
+                                    </p>
+                                </td>
+                            </tr>
+                            
+                                <tr class="test-row">
+                                    <td colspan="2">
+                                        <pre class='pre stack panel'>    at async ProductsPage.updateQty (file:///D:/Testing%20Mavens/Auto_testing/test/pageobjects/Assessment/ProductPage.js:36:9)
+    at async UserContext.&lt;anonymous&gt; (file:///D:/Testing%20Mavens/Auto_testing/test/specs/luma.e2e.js:58:9)</pre>
+                                    </td>
+                                </tr>
+                            
+                        
+                        
+                        
+                        
                     
                 </table>
             </td>
@@ -524,9 +677,160 @@
                         <td colspan="2" class="test-pass">
                             <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
                             <span class="success">&#10004;</span>
-                            <span class="test-title">should click on view cart button and navigate to cart page</span>
+                            <span class="test-title">should navigate to the cart page</span>
                         </td>
                     </tr>
+                    
+                </table>
+            </td>
+        <tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>
+                <table class="table table-test">
+                    <tr class="test-header">
+                        <td colspan="2" class="test-fail">
+                            <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
+                            <span class="error">&#10006;</span>
+                            <span class="test-title">should validate the product name</span>
+                        </td>
+                    </tr>
+                    
+                        
+                            <tr class="test-row expandable-control">
+                                <td colspan="2">
+                                    <p class="pre assert ">
+                                <span style="margin: 2px; padding: 1px"
+                                      class='glyphicon glyphicon-chevron-down'>&nbsp;</span>
+                                        Assertion: 
+                                    </p>
+                                </td>
+                            </tr>
+                            
+                        
+                        
+                        
+                        
+                    
+                </table>
+            </td>
+        <tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>
+                <table class="table table-test">
+                    <tr class="test-header">
+                        <td colspan="2" class="test-pass">
+                            <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
+                            <span class="success">&#10004;</span>
+                            <span class="test-title">should navigate to checkout page</span>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        <tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>
+                <table class="table table-test">
+                    <tr class="test-header">
+                        <td colspan="2" class="test-fail">
+                            <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
+                            <span class="error">&#10006;</span>
+                            <span class="test-title">should fill in the shipping form</span>
+                        </td>
+                    </tr>
+                    
+                        
+                            <tr class="test-row expandable-control">
+                                <td colspan="2">
+                                    <p class="pre assert ">
+                                <span style="margin: 2px; padding: 1px"
+                                      class='glyphicon glyphicon-chevron-down'>&nbsp;</span>
+                                        Assertion: Unhandled promise rejection: TypeError: received?.getElement is not a function
+                                    </p>
+                                </td>
+                            </tr>
+                            
+                                <tr class="test-row">
+                                    <td colspan="2">
+                                        <pre class='pre stack panel'>    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)</pre>
+                                    </td>
+                                </tr>
+                            
+                        
+                        
+                        
+                        
+                    
+                        
+                            <tr class="test-row expandable-control">
+                                <td colspan="2">
+                                    <p class="pre assert ">
+                                <span style="margin: 2px; padding: 1px"
+                                      class='glyphicon glyphicon-chevron-down'>&nbsp;</span>
+                                        Assertion: TypeError: this.$lastname is not a function
+                                    </p>
+                                </td>
+                            </tr>
+                            
+                                <tr class="test-row">
+                                    <td colspan="2">
+                                        <pre class='pre stack panel'>    at CheckoutPage.fillForm (file:///D:/Testing%20Mavens/Auto_testing/test/pageobjects/Assessment/CheckoutPage.js:34:20)
+    at async UserContext.&lt;anonymous&gt; (file:///D:/Testing%20Mavens/Auto_testing/test/specs/luma.e2e.js:83:9)</pre>
+                                    </td>
+                                </tr>
+                            
+                        
+                        
+                        
+                        
+                    
+                </table>
+            </td>
+        <tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>
+                <table class="table table-test">
+                    <tr class="test-header">
+                        <td colspan="2" class="test-fail">
+                            <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
+                            <span class="error">&#10006;</span>
+                            <span class="test-title">should place the order and success message displayed</span>
+                        </td>
+                    </tr>
+                    
+                        
+                            <tr class="test-row expandable-control">
+                                <td colspan="2">
+                                    <p class="pre assert ">
+                                <span style="margin: 2px; padding: 1px"
+                                      class='glyphicon glyphicon-chevron-down'>&nbsp;</span>
+                                        Assertion: Error: Can&#39;t call click on element with selector &quot;//button[@class=&#39;action primary checkout&#39;]&quot; because element wasn&#39;t found
+                                    </p>
+                                </td>
+                            </tr>
+                            
+                                <tr class="test-row">
+                                    <td colspan="2">
+                                        <pre class='pre stack panel'>    at async UserContext.&lt;anonymous&gt; (file:///D:/Testing%20Mavens/Auto_testing/test/specs/luma.e2e.js:88:9)</pre>
+                                    </td>
+                                </tr>
+                            
+                        
+                        
+                        
+                        
                     
                 </table>
             </td>

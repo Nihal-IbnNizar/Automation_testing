@@ -1,11 +1,17 @@
 {
-    "homeUrl":"https://magento.softwaretestingboard.com/",
-    "demoUser":{
-        "firstname":"Nihal",
-        "lastname":"Test",
-        "email":"nihaltest@testing.com",
-        "password":"Password#123",
-        "confirmPassword":"Password#123"
-    },
-    "prod1":"Hero Hoodie"
+  "homeUrl": "https://magento.softwaretestingboard.com/",
+  "demoUser": {
+    "firstname": "Nihal",
+    "lastname": "Test",
+    "company": "TM",
+    "zipcode": "123465",
+    "street": "123 Main St",
+    "city": "ABC",
+    "phone": "1234657890"
+  },
+  "loginUser": {
+    "email": "nihaltest@testing.com",
+    "password": "Password#1234"
+  },
+  "product": "Cassius Sparring Tank"
 }

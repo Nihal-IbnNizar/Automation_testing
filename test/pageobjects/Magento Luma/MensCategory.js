@@ -5,8 +5,7 @@ class MensCategory extends CommonClass{
         super();
 
         this.$title=()=>$(`//span[text()='Men']/parent::h1`);
-        this.$productName=(prod)=>$(`//a[@title='${prod}']`);
-        //this.$addToCartBtn=(prod)=>$(`//a[@title='${prod}']/../following-sibling::div[@class='product-item-inner']//button[@title='Add to cart']`);
+        this.$topsCategory=()=>$(`//a[text()='Tops']`);
     }
 }
 
